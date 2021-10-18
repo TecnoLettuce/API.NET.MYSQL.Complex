@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NetCoreApiMySQL.Data;
 using NetCoreApiMySQL.Data.Repositories;
+using NetCoreApiMySQL.Data.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,7 @@ namespace NetCoreMySQL
             // Se añade la instancia del Interface y del repositorio
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<ILikeRepository, LikeRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
