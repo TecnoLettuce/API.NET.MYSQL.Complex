@@ -44,6 +44,7 @@ namespace NetCoreApiMySQL.Data.Repositories
 
         }
 
+        // Nuevo Enpoint
         public async Task<Like> GetLikeDetailsAsync(int id)
         {
             var db = dbConnection();
