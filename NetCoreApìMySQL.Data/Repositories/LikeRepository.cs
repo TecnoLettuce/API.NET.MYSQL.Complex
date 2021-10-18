@@ -18,7 +18,7 @@ namespace NetCoreApiMySQL.Data.Repositories
         {
             _connectionString = connectionString;
         }
-
+        
         protected MySqlConnection dbConnection() {
             return new MySqlConnection(_connectionString._connectionString);
         }
